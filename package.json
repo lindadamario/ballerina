@@ -8,8 +8,31 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/rx": "^4.1.2",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.19.2",
+    "config": "^3.3.1",
+    "contentful": "^7.14.5",
+    "get-google-fonts": "^1.2.2",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.27.0",
     "next": "9.4.4",
+    "next-i18next": "^4.5.0",
+    "next-images": "^1.4.0",
+    "nextjs-fonts": "^0.22.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-tabs": "^3.1.1",
+    "sass": "^1.26.10",
+    "styled-components": "^5.1.1",
+    "url-loader": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.43",
+    "babel-plugin-styled-components": "^1.10.7",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0"
   }
 }
