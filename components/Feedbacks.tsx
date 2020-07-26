@@ -4,29 +4,33 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import styled from 'styled-components';
 import Util from '../common/Util';
 
-const white = '#fff';
-const fontSize = '1.25rem';
-const grey = '#a0a0a0';
-
 const Wrapper = styled.section`
   padding: 1em 2em;
   margin: auto auto 0 auto;
   min-height: 180px;
   width: 70%;
   align-self: flex-end;
-  color: ${white};
-  background: rgba(191, 191, 191, 0.2);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
   ul {
     border-bottom-color: transparent;
+
     li {
       background-color: transparent;
+      padding: 0 20px 10px 0;
       border-color: transparent;
       border-radius: 0;
-      padding: 0 20px 10px 0;
-      border-right: 2px solid ${grey};
-      color: ${white};
-      font-size: ${fontSize};
+      border-right: 2px solid #a0a0a0;
+      color: #fff;
+      font-size: 1.25rem;
+      ${({ active }) =>
+        active &&
+        `
+    border-bottom: 2px solid black;
+    opacity: 1;
+  `}
     }
+
     li: last-child {
       border-right-color: transparent;
       padding-left: 20px;
@@ -37,8 +41,6 @@ const Wrapper = styled.section`
 const FeedbackContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-
 `;
 
 const FeedbackTitle = styled.div`
@@ -53,12 +55,13 @@ const FeedbackTitle = styled.div`
 const FeedbackText = styled.div`
   display: inline-flex;
   line-height: 22px;
-  color: ${grey};
+  color: #a0a0a0;
   font-size: 1.12rem;
-  font-weight: 400;
+  font-weight: 300;
 `;
 
 const Feedbacks = () => {
+
   const [audienceFeedbacks, setAudienceFeedbacks] = useState([]);
   const [pressFeedbacks, setPressFeedbacks] = useState([]);
 

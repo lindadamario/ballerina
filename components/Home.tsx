@@ -3,18 +3,11 @@ import styled from 'styled-components';
 import Feedbacks from './Feedbacks';
 const imageUrl = '../static/images/cover.jpg';
 
-const white = '#fff';
-const grey = '#a0a0a0';
-
 const Wrapper = styled.section`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-repeat: no-repeat;
-  background-image: url(${imageUrl});
-  background-position: center top;
-  background-size: 60% auto;
-  background-position: right;
+  background: url(${imageUrl}) right top/60% auto no-repeat;
 `;
 
 const Title = styled.div`
@@ -22,7 +15,7 @@ const Title = styled.div`
   flex-direction: column;
   align-self: center;
   width: 100%;
-  border-left: 6px solid ${white};
+  border-left: 6px solid #fff;
   padding-left: 20px;
   margin-top: 10em;
   h1 {
@@ -30,8 +23,8 @@ const Title = styled.div`
     margin: 0;
   }
   p {
-    font-size: 1.375rem;
-    color: ${grey};
+    font-size: 1.25rem;
+    color: #a0a0a0;
     margin: 10px 0px 0px 0px;
   }
 `;

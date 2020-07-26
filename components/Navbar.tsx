@@ -8,9 +8,12 @@ const MenuListItems = styled.ul`
   li {
     padding: 0px 30px;
     list-style: none;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.125rem;
+    font-weight: 400;
     text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

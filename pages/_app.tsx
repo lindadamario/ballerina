@@ -4,7 +4,6 @@ import 'react-tabs/style/react-tabs.css';
 import '../static/fonts/fonts.css';
 import '../static/styles/styles.global.scss';
 
-
 class MyApp extends App<any> {
   public render() {
     const { Component, pageProps } = this.props;
