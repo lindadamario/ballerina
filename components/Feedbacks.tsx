@@ -21,14 +21,12 @@ const Wrapper = styled.section`
       border-color: transparent;
       border-radius: 0;
       border-right: 2px solid #a0a0a0;
+      border-bottom-color: transparent;
       color: #fff;
       font-size: 1.25rem;
-      ${({ active }) =>
-        active &&
-        `
-    border-bottom: 2px solid black;
-    opacity: 1;
-  `}
+      .is-selected {
+        background: red !important;
+      }
     }
 
     li: last-child {
@@ -64,6 +62,7 @@ const Feedbacks = () => {
 
   const [audienceFeedbacks, setAudienceFeedbacks] = useState([]);
   const [pressFeedbacks, setPressFeedbacks] = useState([]);
+  const [tabIndex, setTabIndex] = useState(1);
 
   useEffect(() => {
     Util.getPressFeedbacks().then((res) => {
@@ -79,7 +78,10 @@ const Feedbacks = () => {
 
   return (
     <Wrapper>
-      <Tabs>
+      <Tabs
+        selectedIndex={tabIndex}
+        onSelect={(tabIndex) => setTabIndex(tabIndex)}
+      >
         <TabList>
           <Tab>Press</Tab>
           <Tab>Audience</Tab>

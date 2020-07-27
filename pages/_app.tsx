@@ -1,6 +1,6 @@
 import App from 'next/app';
 import React from 'react';
-import 'react-tabs/style/react-tabs.css';
+import 'react-tabs/style/react-tabs.scss';
 import '../static/fonts/fonts.css';
 import '../static/styles/styles.global.scss';
 
