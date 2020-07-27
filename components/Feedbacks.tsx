@@ -24,9 +24,6 @@ const Wrapper = styled.section`
       border-bottom-color: transparent;
       color: #fff;
       font-size: 1.25rem;
-      .is-selected {
-        background: red !important;
-      }
     }
 
     li: last-child {
